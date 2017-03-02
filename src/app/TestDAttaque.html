@@ -1,0 +1,49 @@
+<h1>{{title}}</h1>
+
+<!--<div *ngFor="let hero of heros; let i = index">
+  <div *ngFor="let monstre of monstres; let i = index">
+    <div *ngIf="monstres.hp > 0">
+      <div *ngIf="heros.hp > 0">
+        {{heros.nom}} Attaque {{monstres.nom}} <button (click)="onClickAttaque(heros, monstres)">Attaquer</button>
+        {{monstres.nom}} Attaque {{heros.nom}} <button (click)="onClickAttaque(monstres, heros)">Attaquer</button>
+        Hero : {{heros.hp}}pv
+        Monstre : {{monstres.hp}}pv
+      </div>
+    </div>
+    <div *ngIf="monstres.hp <= 0"> {{monstres.nom}} est mort !
+      <div *ngIf="heros.hp > 0">
+        Hero : {{heros.hp}}pv
+      </div>
+    </div>
+    <div *ngIf="heros.hp <= 0"> {{heros.nom}} est mort !
+      <div *ngIf="monstres.hp > 0">
+        Monstre : {{monstres.hp}}pv
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div *ngFor="let hero of heros; let i = index">
+    {{i}} {{hero.nom}}
+    <div *ngFor="let monstre of monstres; let i = index">
+      {{i}} {{monstre.nom}}
+    </div>
+  </div>
+-->
+
+<div *ngIf="selectedHero">
+  <h2>{{selectedHero.nom}} details!</h2>
+  <div><label>Nom: </label>{{selectedHero.nom}}</div>
+  <div><label>HP: </label>{{selectedHero.hp}}</div>
+  <div><label>ATQ: </label>{{selectedHero.atk}}</div>
+  <!--<div><input id=bouton type="submit" value="Aller au combat"></div>-->
+</div>
+
+<h2>Choisissez un hero</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heros" [class.selected]="hero === selectedHero">
+    <button (click)="onSelect(hero)">{{hero.nom}}</button>
+  </li>
+</ul>
+

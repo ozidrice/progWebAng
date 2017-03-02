@@ -5,6 +5,8 @@ import { Personnage } from './Personnage';
 
 
 export class Monstre extends Personnage{
-
+  constructor(name: string, HP: number, ATQ: number){
+    super(name, HP, ATQ)
+  }
 }
 

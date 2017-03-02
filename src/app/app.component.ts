@@ -2,23 +2,18 @@ import { Component } from '@angular/core';
 import { LanceDe } from './LanceDe';
 import { Hero } from './Hero';
 import { Action } from './Action';
-import {Monstre} from './Monstre';
+import { Monstre } from './Monstre';
 
 const HEROES: Hero[] = [
-  { id: 1, name: 'Mr. Nice', HP: 20, ATQ: 8, mana: 20},
-  { id: 2, name: 'Narco', HP: 15, ATQ: 12, mana: 16},
-  { id: 3, name: 'Bombasto', HP: 25, ATQ: 10, mana: 16},
-  { id: 4, name: 'Celeritas', HP: 10, ATQ: 18, mana: 12},
-  { id: 5, name: 'Magneta', HP: 30, ATQ: 5, mana: 32},
-  { id: 6, name: 'RubberMan', HP: 22, ATQ: 11, mana: 16},
-  { id: 7, name: 'Dynama', HP: 3, ATQ: 30, mana: 8},
-  { id: 8, name: 'Dr IQ', HP: 40, ATQ: 2, mana: 80}
+  new Hero('Damien',10, 2,20),
+  new Hero('Lorenso',10, 2,20),
+  new Hero('Yanis',10, 2,20)
 ];
 
 @Component({
   selector: 'my-app',
   template:`
-    <lanceDe></lanceDe>
+    <LanceDe>[Module lancé de dé]</LanceDe>
    
     <div *ngIf="selectedHero">
       <h2>{{selectedHero.name}} details!</h2>

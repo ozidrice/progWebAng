@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 export class Des {
   value: number; //Dès 100, dès 10, dès 6...
   max: number; //Jet sur 70, jet sur 50...
@@ -7,7 +8,7 @@ export class Des {
 }
 
 @Component({
-  selector: 'lanceDe',
+  selector: 'LanceDe',
   template:`
     <h1>{{title}}</h1>
     <button (click)="jetDes()">Lancer</button>
@@ -33,13 +34,14 @@ export class Des {
 `
 })
 
+
+
 export class LanceDe {
   title = 'Lancer un dé';
   des: Des = {
     value: null,
     max: null,
     jet: null
-
   };
 
   jetDes() {
@@ -55,6 +57,7 @@ export class LanceDe {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
   }
-
 }
+
+
 
